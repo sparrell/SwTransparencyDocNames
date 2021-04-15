@@ -13,9 +13,6 @@ I am purposely not using the word "SBOM" yet
 because it is clear to me that different stakeholders
 have different assumptions on the which 'flavor'
 of document is meant by that term.
-I.e. SBOM one of the flavors that needs
-clarification and we need either qualifiers
-or different terms to distinguish the 'flavors'.
 
 I believe that we will talk past each other less,
 if we understand 'which flavor' is under discussion
