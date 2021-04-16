@@ -145,9 +145,9 @@ or we should have different names for some/all of them.
 ## Complete SBOM
 A 'complete' (or full?) SBOM would contain all components,
 including going upstream until all components had no further upstream components.
-An SBOM that 'known-unknowns'
+An SBOM that has 'known-unknowns'
 (e.g. had a component that it was unknown whether it contained any upstream
-components) would be a 'incomplete' SBOM.
+components) would be an 'incomplete' SBOM.
 
 ## "less than baseline" SWOTS
 There are transparency artifacts that do not contain enough information
