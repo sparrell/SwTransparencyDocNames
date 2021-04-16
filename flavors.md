@@ -154,9 +154,17 @@ There are transparency artifacts that do not contain enough information
 to be considered SBOMs by the definition above.
 For example some vendors list components without sufficient identification
 to know the version.
-Should such artifacts be able to be called SBOMs?
-Or should be have a qualifier (eg 'not quite' SBOMs)?
-Or should then have a different name entirely.
+- Should such artifacts be able to be called SBOMs?
+- Or should they have a qualifier (eg 'not quite' SBOMs)?
+- Or should then have a different name entirely.
+
+## Component Relationship Artifacts
+Consider two artifacts for the same compound component:
+- artifact one contains the components and their relationships eg A includes B & C; B includes D; ...
+- artifact two is a 'parts list' is artifact one minus all the relationships. Ie it is a 'parts list' without the 'assembly diagram' eg A,B,C,D,...
+
+Both could be argued to be compliant with baseline framing definition of an SBOM.
+Should they have different names?
 
 ## Artifacts created by post-processing of SBOMs
 I am a proponent of the IACD (Integrated Adaptive Cyber Defense,
@@ -176,26 +184,30 @@ if these 'beyond baseline' artifacts
 went by names other than SBOMs.
 
 ### Component to license relationships
-If the 'ingredients-only baseline SBOM'
+If the 'ingredients-only baseline SBOM' is augmented
+with the relationship of each component to licensing information:
+- Should such artifacts be able to be called SBOMs?
+- Or should it have a qualifier (eg 'Licensing' SBOMs)?
+- Or should they have a different name entirely?
 
-### SBOM +
-In the comply-to-connect use case, obtaining the SBOM
-(for a device connecting to a network) is sensing.
-Combing
+### Component to CVE relationships
+If the 'ingredients-only baseline SBOM' is augmented
+with the relationship of each component to CVE information:
+- Should such artifacts be able to be called SBOMs?
+- Or should it have a qualifier (eg 'CVE' SBOMs)?
+- Or should they have a different name entirely?
 
-## to do
-parts list vs bom
+### Component 'affected'
+The VEX contains component "affected/not-affected" relationship to vulnerability
+... from VEX docs
 
-"all analogies are wrong, some are useful"
+### Component Assembly
+If the 'ingredients-only baseline SBOM' is augmented
+with the information on an 'as-built' instantiation was created
+(eg which version of compiler with which configuration options):
+- Should such artifacts be able to be called SBOMs?
+- Or should it have a qualifier (eg 'build' SBOMs)?
+- Or should they have a different name entirely?
 
-- ingredients only
-- assembly instructions
-- component to license relationships
-- known-unknowns / incomplete / "one-hop" / "complete"
-- component to vulnerability relationships
-- component "affected/not-affected" relationship to vulnerability
-- has ingredients but not 'sufficient' for SBOM baseline as defined by framing
-- has insufficient data for a particular use case (many examples which will need to be un-confounded)
-
-
-instantiation containing components vs 'loose component'
+### Component Provenance & Pedigree relationships
+etc
