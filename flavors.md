@@ -176,6 +176,20 @@ IACD separates functionality as:
 - decision making
 - acting
 
+In such an automated system, the decison making module may send a command
+(e.g. an OpenC2 command)
+to a sensing function (which may reside on the device itself)
+to obtain the device's SBOM.
+Following a CACAO playbook, it may then send the SBOM to a sense-making function
+to correlate the SBOM with vulnerabilities (eg vs the NVD) and licensing issues.
+Depending on the answers, it would follow different paths in the CACAO playbook
+(connect, patch, sandbox, send to detonation chamber, send to deception engine, ...).
+
+This is a case when an
+'ingredients-only baseline SBOM'
+is augmented with'beyond baseline' information?
+Is it still an SBOM?
+
 What is the artifact called when the
 'ingredients-only baseline SBOM'
 is augmented with'beyond baseline' information?
@@ -199,7 +213,12 @@ with the relationship of each component to CVE information:
 
 ### Component 'affected'
 The VEX contains component "affected/not-affected" relationship to vulnerability
-... from VEX docs
+... from VEX docs.
+Is it agreed that is called a VEX, not an SBOM?
+What if an SPDX or CycloneDx artifact:
+- starts ingredients only (called an SBOM)
+- has CVE relationship information added (does 'type' or 'name' of document change?)
+- has "affected/not-affected relationship to vulnerability" added (while still containing the other info)
 
 ### Component Assembly
 If the 'ingredients-only baseline SBOM' is augmented
@@ -210,4 +229,22 @@ with the information on an 'as-built' instantiation was created
 - Or should they have a different name entirely?
 
 ### Component Provenance & Pedigree relationships
-etc
+what if provenance and pedigree information is included?
+What is the artifact called in this case?
+
+## Totally different (but confounded) Topic
+What is the SWOTS of?
+- a source package on github (eg https://github.com/sFractal-Podii/quizquadaminos)
+   + note this is amorphous without a specific date/time, package, ...
+   + not useful for many usecases, but still use better than nothing
+- a source-only github release (eg https://github.com/sFractal-Podii/quizquadaminos/releases/tag/v0.7.2)
+   + this is a dated release. It is (sort of, more later) the actual code that ran the game at RSAC
+   + note it does not contain the compiled binaries
+- the binary of the previous bullet (with it's own subflavors)
+- as would come from a package manager. This case probably should be language dependent since different languages put different combinations in their packages of:
+   + source,
+   + machine-independent virtual machine bytecode (eg pyc in python, beam in erlang, ..),  
+   + machine-dependent executables
+- 'as built' ie including config files and instantiation-specific details
+   + in the game example above, the host url is the only difference between two
+instantiations (eg test.qqb.sfractal.com for test and quadblockquiz.org for production). But that change ripples into different compiled binaries (BEAM bytecode in this case)
