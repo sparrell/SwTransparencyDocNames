@@ -1,5 +1,13 @@
 # Flavors of Software Transparency Artifacts
 
+TL;DR
+- can we agree that we can call something an SBOM if (iff?)
+   + it is in one of SWID, SPDX, CycloneDx formats AND
+   + has all the baseline elements, and nothing more than the baseline elements?
+- what do we call something that many would call an SBOM but does not contain all the baseline elements?
+- what do we call something that contain all the baseline elements but also contains some 'beyond baseline' elements?
+
+
 “There are only two hard things in Computer Science:
 cache invalidation and naming things.”
 
